@@ -1,4 +1,73 @@
-.container {
+.myContainer {
+    position: relative;
+    //display: flex;
+    //flex-direction: column;
+    //flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1380px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #0074c7;
+}
+
+.rectangle {
+    position: relative;
+    top: -1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 0 0 3rem 3rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0074c7;
+}
+
+.info {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-right: 10px;
+    color: white;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.logo {
+    width: 325px;
+}
+
+.address {
+    width: 300px;
+    padding-left: 50px;
+    padding-right: 10px;
+    
+}
+
+.telephone {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2vh 0;
 }
