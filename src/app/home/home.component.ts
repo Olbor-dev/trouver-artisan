@@ -6,31 +6,31 @@ import { Component } from '@angular/core';
   template: `
     <div>
       <div class="info">
-        <h1>Comment trouver mon artisan ?</h1>
+        <h1 class="info-title">Comment trouver mon artisan ?</h1>
         <div class="list">
           <div class="list-item">
             <div class="list-item-number">
               <p>1</p>
             </div>
-            <p>Choisir la catégorie d'artisanat dans le menu</p>
+            <p class="list-item-text">Choisir la catégorie d'artisanat dans le menu</p>
           </div>
           <div class="list-item">
             <div class="list-item-number">
               <p>2</p>
             </div>
-            <p>Choisir un artisan</p>
+            <p class="list-item-text">Choisir un artisan</p>
           </div>
           <div class="list-item">
             <div class="list-item-number">
               <p>3</p>
             </div>
-            <p>Le contacter via le formulaire de contact</p>
+            <p class="list-item-text">Le contacter via le formulaire de contact</p>
           </div>
-          <div class="list-item">
+          <div class="list-item special">
             <div class="list-item-number">
               <p>4</p>
             </div>
-            <p>Une réponse sera apportée sous 48h</p>
+            <p class="list-item-text">Une réponse sera apportée sous 48h</p>
           </div>
         </div>
       </div>
