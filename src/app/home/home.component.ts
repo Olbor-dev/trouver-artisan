@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ArtisanComponent } from "../artisan/artisan.component";
+import { Artisan } from '../artisan';
+import { ArtisansService } from '../artisans.service';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule, ArtisanComponent],
   template: `
     <div>
       <div class="info">
@@ -41,6 +45,7 @@ import { Component } from '@angular/core';
           </div>
           <h2 class="article-title">Artisans du mois</h2>
           <div class="">
+            <app-artisan *ngFor="let artisan of artisanList" [artisan]="artisan"></app-artisan>
 
           </div>
         </div>
@@ -49,6 +54,13 @@ import { Component } from '@angular/core';
   `,
   styleUrl: './home.component.scss'
 })
+
 export class HomeComponent {
+  artisanList: Artisan[] = [];
+  artisansService: ArtisansService = inject (ArtisansService);
+
+  constructor() {
+    this.artisanList = this.artisansService.getAllArtisans();
+  }
 
 }
