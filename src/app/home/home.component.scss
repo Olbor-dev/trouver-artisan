@@ -12,7 +12,7 @@
 .info-title {
     text-align: center;
     font-weight: bold;
-    font-size: clamp(1rem, 3.5vw, 3rem);
+    font-size: clamp(1rem, 2.5rem, 2.5rem);
 }
 
 .list-item {
@@ -49,4 +49,23 @@
 
 .special {
     background-color: #0074c7;
+}
+
+.line {
+    top: 3.6rem;
+    left: 0;
+    width: 2.5rem;
+    height: .6rem;
+    content: "";
+    background: #0074c7;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.article-title {
+    color: #00497c;
+    font-size: clamp(1rem, 2.2rem, 2.2rem);
+    font-weight: bold;
+    margin-left: 12%;
 }

@@ -35,11 +35,11 @@ import { Component } from '@angular/core';
         </div>
       </div>
       <div class="article">
-        <div class="article-title">
+        <div class="">
           <div class="line">
 
           </div>
-          <h2>Artisans du mois</h2>
+          <h2 class="article-title">Artisans du mois</h2>
           <div class="">
 
           </div>
