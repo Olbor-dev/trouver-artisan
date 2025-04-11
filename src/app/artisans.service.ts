@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Artisan } from './artisan';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -118,7 +119,7 @@ export class ArtisansService {
       id: 10,
       name: "Au pain chaud",
       specialty: "Boulanger",
-      note: 4.8,
+      note: 4.6,
       location: "Montélimar",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin." ,
       email: "aupainchaud@hotmail.com",
@@ -217,5 +218,9 @@ export class ArtisansService {
   getAllArtisans() : Artisan [] {
     return this.artisansList;
   };
-  
+
+  getArtisans(): Observable<Artisan[]> {
+    return of(this.artisansList);
+  }
+
 }

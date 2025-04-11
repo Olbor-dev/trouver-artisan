@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ArtisanComponent } from "../artisan/artisan.component";
 import { Artisan } from '../artisan';
 import { ArtisansService } from '../artisans.service';
+import { ArtisanOfMonthPipe } from '../pipes/artisan-of-month.pipe';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, ArtisanComponent],
+  imports: [CommonModule, ArtisanComponent, ArtisanOfMonthPipe],
   template: `
     <div>
       <div class="info">
@@ -44,8 +45,8 @@ import { ArtisansService } from '../artisans.service';
 
           </div>
           <h2 class="article-title">Artisans du mois</h2>
-          <div class="">
-            <app-artisan *ngFor="let artisan of artisanList" [artisan]="artisan"></app-artisan>
+          <div class="d-flex flex-row justify-content-evenly flex-wrap">
+            <app-artisan *ngFor="let artisan of artisanList | artisanOfMonth" [artisan]="artisan"></app-artisan>
 
           </div>
         </div>

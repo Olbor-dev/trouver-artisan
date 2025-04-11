@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterModule],
   template: `
     <div>
       <div class="myContainer">
@@ -19,10 +20,10 @@ import { Component } from '@angular/core';
           <nav>
             <ul class="nav nav-underline">
               <li class="nav-item">
-                <a class="nav-link" href="#">Bâtiment</a>
+                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Bâtiment']">Bâtiment</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Services']">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Fabrication</a>
