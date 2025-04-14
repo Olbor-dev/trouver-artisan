@@ -9,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-artisans-list',
   imports: [CommonModule, ArtisanComponent],
   template: `
-        <div class="">
+        <div class="article">
           <div class="line">
-
           </div>
-          <h2 class="article-title">Artisans du </h2>
-          <div class="d-flex flex-row justify-content-evenly flex-wrap">
-            <app-artisan *ngFor="let artisan of filteredArtisans"></app-artisan>
-
+          <h2 class="article-title">Liste des artisans "{{ category ? category : "tous"}}"</h2>
+          <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <app-artisan *ngFor="let artisan of filteredArtisans" [artisan]="artisan"></app-artisan>
+            </div>
           </div>
           
         </div>
@@ -27,6 +27,7 @@ export class ArtisansListComponent implements OnInit {
   artisansList: Artisan[] = [];
   filteredArtisans: Artisan[] = [];
   artisansService: ArtisansService = inject (ArtisansService);
+  category: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,11 +39,11 @@ export class ArtisansListComponent implements OnInit {
       this.artisansList = data;
 
       this.route.paramMap.subscribe(params => {
+        this.category = params.get('category');
         const category = params.get('category');
-        console.log("catégorie", category)
         if (category) {
           this.filteredArtisans = this.artisansList.filter(a => a.category === category);
-          
+          //console.log("Categorie", this.category)
         } else {
           this.filteredArtisans = this.artisansList;
         }

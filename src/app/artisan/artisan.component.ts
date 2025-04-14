@@ -6,8 +6,7 @@ import { Artisan } from '../artisan';
   selector: 'app-artisan',
   imports: [CommonModule],
   template: `
-    
-    <section class="d-flex flex-column align-items-center bg-info p-4 rounded-4">
+    <section class="d-flex flex-column align-items-center bg-info p-4 rounded-4 mb-3">
       <h2 class="text-secondary fw-bold stamp">{{artisan.name}}</h2>
       <div class="stars d-flex gap-1 fs-4">
         <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">

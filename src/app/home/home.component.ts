@@ -42,7 +42,6 @@ import { ArtisanOfMonthPipe } from '../pipes/artisan-of-month.pipe';
       <div class="article">
         <div class="">
           <div class="line">
-
           </div>
           <h2 class="article-title">Artisans du mois</h2>
           <div class="d-flex flex-row justify-content-evenly flex-wrap">

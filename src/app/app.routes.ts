@@ -16,11 +16,7 @@ export const routes: Routes = [
     {
         path: 'home/artisans/:category',
         component: ArtisansListComponent,
-        title: 'Bâtiment / Trouver mon artisan'
+        title: 'Liste des artisans | région Auvergne Rhône Alpes'
     },
-    {
-        path: 'home/artisans/:category',
-        component: ArtisansListComponent,
-        title: 'Services / Trouver mon artisan'
-    }
+
 ];

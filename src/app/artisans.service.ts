@@ -220,7 +220,7 @@ export class ArtisansService {
   };
 
   getArtisans(): Observable<Artisan[]> {
-    return of(this.artisansList);
+    return of (this.artisansList);
   }
 
 }

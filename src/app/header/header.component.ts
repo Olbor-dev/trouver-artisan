@@ -26,10 +26,10 @@ import { RouterModule } from '@angular/router';
                 <a class="nav-link" [routerLink]="['/home', 'artisans', 'Services']">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Fabrication</a>
+                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Fabrication']">Fabrication</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Alimentation</a>
+                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Alimentation']">Alimentation</a>
               </li>
             </ul>        
           </nav>
