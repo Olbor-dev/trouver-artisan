@@ -221,6 +221,9 @@ export class ArtisansService {
 
   getArtisans(): Observable<Artisan[]> {
     return of (this.artisansList);
-  }
+  };
 
+  getArtisanById(id: Number): Artisan | undefined {
+    return this.artisansList.find(artisan => artisan.id === id);
+  }
 }

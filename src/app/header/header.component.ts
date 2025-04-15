@@ -20,16 +20,16 @@ import { RouterModule } from '@angular/router';
           <nav>
             <ul class="nav nav-underline">
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Bâtiment']">Bâtiment</a>
+                <a class="nav-link" [routerLink]="['/home', 'Bâtiment']">Bâtiment</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Services']">Services</a>
+                <a class="nav-link" [routerLink]="['/home', 'Services']">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Fabrication']">Fabrication</a>
+                <a class="nav-link" [routerLink]="['/home', 'Fabrication']">Fabrication</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/home', 'artisans', 'Alimentation']">Alimentation</a>
+                <a class="nav-link" [routerLink]="['/home', 'Alimentation']">Alimentation</a>
               </li>
             </ul>        
           </nav>
