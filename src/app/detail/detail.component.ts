@@ -10,14 +10,15 @@ import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-detail',
   imports: [CommonModule, ReactiveFormsModule],
   template: `
-    <section>
-      <article class="container" *ngIf="artisan">
+    <div class="container d-flex flex-wrap justify-content-center mt-4">
+    <section class="artisan">
+      <article class="" *ngIf="artisan">
         <div class="row">
-          <p class="col-4 text-secondary fs-4">Entreprise :</p>
+          <p class="col-4 text-secondary fs-5">Entreprise :</p>
           <h2 class="col-8 text-secondary fw-bold">{{artisan.name}}</h2>
         </div>
         <div class="row align-items-start">
-          <p class="col-4 text-secondary fs-4">Note :</p>
+          <p class="col-4 text-secondary fs-5">Note :</p>
           <div class="col-4">
             <div class="stars d-flex gap-1 fs-3">
               <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
@@ -29,32 +30,36 @@ import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
           </div>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-4">Spécialité :</p>
+          <p class="col-4 text-secondary fs-5">Spécialité :</p>
           <p class="col-8 text-secondary fs-4">{{artisan.specialty}}</p>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-4">Localisation :</p>
+          <p class="col-4 text-secondary fs-5">Localisation :</p>
           <h3 class="col-8 text-secondary fw-bold fs-4">{{artisan.location}}</h3>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-4">A propos :</p>
-          <p class="col-8 text-secondary fs-4">{{artisan.about}}</p>
+          <p class="col-4 text-secondary fs-5">A propos :</p>
+          <p class="col-8 text-secondary fs-5">{{artisan.about}}</p>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-4">Site web :</p>
-          <p class="col-8 text-secondary fs-4">{{artisan.website}}</p>
+          <p class="col-4 text-secondary fs-5">Site web :</p>
+          <p class="col-8 text-secondary fs-5">{{artisan.website}}</p>
         </div>
       </article>
-      <form [formGroup]="applyForm">
-        <label for="first-name">Nom</label>
+    </section>
+    <section class="contactForm text-secondary bg-info">
+      <p>Pour me contacter, vous pouvez m'envoyer le formulaire suivant :</p>
+      <form class="d-flex flex-column m-3" [formGroup]="applyForm">
+        <label class="name" for="first-name">Nom</label>
         <input id="first-name" type="text" formControlName="firstName">
         <label for="subject">Objet</label>
         <input id="subject" type="text" formControlName="subject">
         <label for="message">Message</label>
-        <input id="message" type="text" formControlName="message">
+        <textarea id="message" type="text" formControlName="message"></textarea>
         <button type="submit" class="btn btn-primary">Soumettre</button>
       </form>
     </section>
+    </div>
   `,
   styleUrl: './detail.component.scss'
 })
