@@ -14,13 +14,13 @@ import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
     <section class="artisan">
       <article class="" *ngIf="artisan">
         <div class="row">
-          <p class="col-4 text-secondary fs-5">Entreprise :</p>
+          <p class="col-4 text-secondary fs-6">Entreprise :</p>
           <h2 class="col-8 text-secondary fw-bold">{{artisan.name}}</h2>
         </div>
         <div class="row align-items-start">
-          <p class="col-4 text-secondary fs-5">Note :</p>
+          <p class="col-4 text-secondary fs-6">Note :</p>
           <div class="col-4">
-            <div class="stars d-flex gap-1 fs-3">
+            <div class="stars d-flex gap-1 fs-4">
               <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
                 <span class="text-primary">
                   {{ (artisan.note - i) > 0.5 ? '★' : '☆' }}</span>
@@ -30,25 +30,25 @@ import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
           </div>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-5">Spécialité :</p>
-          <p class="col-8 text-secondary fs-4">{{artisan.specialty}}</p>
+          <p class="col-4 text-secondary fs-6">Spécialité :</p>
+          <p class="col-8 text-secondary fs-5">{{artisan.specialty}}</p>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-5">Localisation :</p>
-          <h3 class="col-8 text-secondary fw-bold fs-4">{{artisan.location}}</h3>
+          <p class="col-4 text-secondary fs-6">Localisation :</p>
+          <h3 class="col-8 text-secondary fw-bold fs-5">{{artisan.location}}</h3>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-5">A propos :</p>
-          <p class="col-8 text-secondary fs-5">{{artisan.about}}</p>
+          <p class="col-4 text-secondary fs-6">A propos :</p>
+          <p class="col-8 text-secondary fs-6">{{artisan.about}}</p>
         </div>
         <div class="row">
-          <p class="col-4 text-secondary fs-5">Site web :</p>
-          <p class="col-8 text-secondary fs-5">{{artisan.website}}</p>
+          <p class="col-4 text-secondary fs-6">Site web :</p>
+          <p class="col-8 text-secondary fs-6">{{artisan.website}}</p>
         </div>
       </article>
     </section>
-    <section class="contactForm text-secondary bg-info">
-      <p>Pour me contacter, vous pouvez m'envoyer le formulaire suivant :</p>
+    <section class="contactForm text-secondary bg-info my-4">
+      <p class="text-center p-2">Vous pouvez me contacter avec le formulaire suivant :</p>
       <form class="d-flex flex-column m-3" [formGroup]="applyForm">
         <label class="name" for="first-name">Nom</label>
         <input id="first-name" type="text" formControlName="firstName">
@@ -56,7 +56,7 @@ import { FormControl,FormGroup, ReactiveFormsModule } from '@angular/forms';
         <input id="subject" type="text" formControlName="subject">
         <label for="message">Message</label>
         <textarea id="message" type="text" formControlName="message"></textarea>
-        <button type="submit" class="btn btn-primary">Soumettre</button>
+        <button type="submit" class="btn btn-primary w-50 mt-5 fs-5 position-relative start-50 translate-middle">Soumettre</button>
       </form>
     </section>
     </div>
