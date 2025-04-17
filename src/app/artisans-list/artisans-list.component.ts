@@ -3,7 +3,7 @@ import { ArtisanComponent } from '../artisan/artisan.component';
 import { Artisan } from '../artisan';
 import { ArtisansService } from '../artisans.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-artisans-list',
@@ -28,10 +28,11 @@ export class ArtisansListComponent implements OnInit {
   filteredArtisans: Artisan[] = [];
   artisansService: ArtisansService = inject (ArtisansService);
   category: string | null = null;
+  validCategorys: string[] = ['Bâtiment', 'Services', 'Fabrication', 'Alimentation'];
 
   constructor(
     private route: ActivatedRoute,
-    
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -40,10 +41,17 @@ export class ArtisansListComponent implements OnInit {
 
       this.route.paramMap.subscribe(params => {
         this.category = params.get('category');
-        const category = params.get('category');
-        if (category) {
-          this.filteredArtisans = this.artisansList.filter(a => a.category === category);
-          //console.log("Categorie", this.category)
+
+        if (this.category) {
+          // Redirection vers la page 404 si la category n'existe pas dans la base
+          if (!this.validCategorys.includes(this.category)) {
+            this.router.navigate(['/404']);
+            return;
+          }
+          this.filteredArtisans = this.artisansList.filter(
+            a => a.category === this.category
+          );
+
         } else {
           this.filteredArtisans = this.artisansList;
         }

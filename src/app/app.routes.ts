@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ArtisansListComponent } from './artisans-list/artisans-list.component';
 import { DetailComponent } from './detail/detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,15 @@ export const routes: Routes = [
         path: 'detail/:id',
         component: DetailComponent,
         title: 'Détail artisan | région Auvergne Rhône Alpes'
+    },
+    {
+        path: '404',
+        component: PageNotFoundComponent,
+        title: 'Page non trouvée'
+    },
+    {
+        path: '**',
+        redirectTo: '404'
     }
 
 ];
