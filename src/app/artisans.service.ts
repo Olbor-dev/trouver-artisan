@@ -226,4 +226,5 @@ export class ArtisansService {
   getArtisanById(id: Number): Artisan | undefined {
     return this.artisansList.find(artisan => artisan.id === id);
   }
+
 }

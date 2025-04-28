@@ -31,6 +31,11 @@ export const routes: Routes = [
         title: 'Détail artisan | région Auvergne Rhône Alpes'
     },
     {
+        path: 'home/recherche',
+        component: ArtisansListComponent,
+        title: 'Recherche des artisans | région Auvergne Rhône Alpes'  
+    },
+    {
         path: '404',
         component: PageNotFoundComponent,
         title: 'Page non trouvée'
