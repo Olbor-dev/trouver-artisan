@@ -1,0 +1,53 @@
+.myContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1380px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    display: inline-block;
+    width: 20.5rem;
+}
+
+.menu {
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.search {
+    width: fit-content;
+    margin-left: auto;
+    border-bottom: solid;
+    border-color: #384050;
+}
+
+.search-area {
+    border: none;
+}
+
+.nav {
+    gap: 15px;
+    row-gap: 0px;
+}
+
+.nav-link {
+    color: #384050;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding-bottom: 0px;
+}
+
+.separator {
+    width: 100%;
+    height: 3px;
+    background-color: #384050;
+    margin: 0;
+  }
