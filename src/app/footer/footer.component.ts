@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
         <div class="info">
           <img class="logo" src="assets/images/Logo-White-500px.png" alt="Logo du site trouver mon artisan de la région Auvergne Rhône Alpes">
           <address class="address">
-            <h3><strong>Lyon</strong></h3>
+            <p><strong>Lyon</strong></p>
             <p>
               101 cours Charlemagne<br>
               CS 20033<br>

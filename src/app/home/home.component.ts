@@ -9,7 +9,7 @@ import { ArtisanOfMonthPipe } from '../pipes/artisan-of-month.pipe';
   selector: 'app-home',
   imports: [CommonModule, ArtisanComponent, ArtisanOfMonthPipe],
   template: `
-    <div>
+    <div class="myContainer">
       <div class="info">
         <h1 class="info-title">Comment trouver mon artisan ?</h1>
         <div class="list">
@@ -40,7 +40,7 @@ import { ArtisanOfMonthPipe } from '../pipes/artisan-of-month.pipe';
         </div>
       </div>
       <div class="article">
-        <div class="">
+        <div>
           <div class="line">
           </div>
           <h2 class="article-title">Artisans du mois</h2>
